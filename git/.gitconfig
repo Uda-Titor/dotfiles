@@ -1,0 +1,20 @@
+[user]
+    name = 'Ryohei Udagawa'
+    email = 'hogehoge'
+[core]
+        editor = vim -c \"set fenc=utf-8\"
+[commit]
+        template = ~/.commit_template
+[ghq]
+        root = ~/workspace/ghq
+[push]
+	default = current
+[pull]
+	rebase = false
+[init]
+	defaultBranch = main
+[color]
+	ui = true
+	diff = true
+	interactive = true
+	status = true

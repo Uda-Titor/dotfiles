@@ -40,8 +40,6 @@ alias ghqlist='cd $(ghq list -p | peco)'
 alias t='tig'
 alias c='code .'
 alias tree="pwd;find . | sort | sed '1d;s/^\.//;s/\/\([^/]*\)$/|--\1/;s/\/[^/|]*/| /g'"
-
-# その他
 alias n="nvim"
 alias e="exit"
 alias l='lazydocker'

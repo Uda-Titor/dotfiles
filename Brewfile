@@ -44,7 +44,6 @@ cask "visual-studio-code"
 cask "chromedriver"
 cask "dbeaver-community"
 cask "docker"
-cask "obsidian"
 cask "iterm2"
 cask "cleanshot"
 cask "ankerwork"
@@ -56,4 +55,3 @@ cask 'todoist'
 cask 'chatgpt'
 cask 'discord'
 cask 'font-hack-nerd-font'
-

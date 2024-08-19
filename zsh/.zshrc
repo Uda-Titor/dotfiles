@@ -14,6 +14,7 @@ zstyle :prompt:pure:path color '#ffff00'
 bindkey '^r' anyframe-widget-execute-history
 bindkey '^b' anyframe-widget-checkout-git-branch
 
+# git command alias
 alias gb='git branch'
 alias gl='git log'
 alias gf='git fetch'
@@ -29,13 +30,13 @@ alias gm='git commit'
 alias gd='git branch | grep -v "main\|develop\|release-candidate" | xargs git branch -D'
 alias grs='git reset --soft'
 alias grh='git reset --hard'
-# git cli alias
+# GitHub cli alias
 alias ghbb='gh pr view --web'
 alias ghb='gh browse'
 alias ghp='gh pr create --web'
 alias ghpl='gh pr list'
 alias ghprs='gh requested-prs'
-# その他
+# others alias
 alias ghqlist='cd $(ghq list -p | peco)'
 alias t='tig'
 alias c='code .'
@@ -44,15 +45,6 @@ alias n="nvim"
 alias e="exit"
 alias l='lazydocker'
 alias db='gobang'
-export PATH="/usr/local/opt/openjdk@11/bin:$PATH"
-export ANDROID_HOME=$HOME/Library/Android/sdk
-export PATH=$PATH:$ANDROID_HOME/emulator
-export PATH=$PATH:$ANDROID_HOME/tools
-export PATH=$PATH:$ANDROID_HOME/tools/bin
-export PATH="/opt/homebrew/opt/libpq/bin:$PATH"
-export LDFLAGS="-L/opt/homebrew/opt/libpq/lib"
-export CPPFLAGS="-I/opt/homebrew/opt/libpq/include"
-export PKG_CONFIG_PATH="/opt/homebrew/opt/libpq/lib/pkgconfig"
 
 #node
 export PATH=$HOME/.nodebrew/current/bin:$PATH
@@ -65,3 +57,14 @@ export PKG_CONFIG_PATH=$PKG_CONFIG_PATH:"/opt/homebrew/opt/openssl@1.1/lib/pkgco
 
 #go
 export GOPATH=$HOME/go
+
+# その他
+export PATH="/usr/local/opt/openjdk@11/bin:$PATH"
+export ANDROID_HOME=$HOME/Library/Android/sdk
+export PATH=$PATH:$ANDROID_HOME/emulator
+export PATH=$PATH:$ANDROID_HOME/tools
+export PATH=$PATH:$ANDROID_HOME/tools/bin
+export PATH="/opt/homebrew/opt/libpq/bin:$PATH"
+export LDFLAGS="-L/opt/homebrew/opt/libpq/lib"
+export CPPFLAGS="-I/opt/homebrew/opt/libpq/include"
+export PKG_CONFIG_PATH="/opt/homebrew/opt/libpq/lib/pkgconfig"

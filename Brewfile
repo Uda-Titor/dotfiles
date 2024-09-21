@@ -36,6 +36,8 @@ brew 'z'
 brew "neovim"
 brew "lazydocker"
 brew "stow"
+brew "kubernetes-cli"
+brew "neat"
 cask "google-chrome"
 cask "raycast"
 cask "postman"

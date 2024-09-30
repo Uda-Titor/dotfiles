@@ -9,49 +9,48 @@ zinit light zsh-users/zsh-autosuggestions
 zinit light zsh-users/zsh-completions
 zinit light mollifier/anyframe
 zinit light sindresorhus/pure
-zinit light olets/zsh-abbr
 zstyle :prompt:pure:path color '#ffff00'
 
 bindkey '^r' anyframe-widget-execute-history
 bindkey '^b' anyframe-widget-checkout-git-branch
 
-# git command abbr
-abbr gb='git branch'
-abbr gl='git log'
-abbr glo='git log --oneline'
-abbr gf='git fetch'
-abbr gph='git push origin'
-abbr gpfh='git push -f origin'
-abbr gpl='git pull origin'
-abbr gcb='git checkout -b'
-abbr gs='git switch'
-abbr gst='git stash'
-abbr gsta='git stash apply'
-abbr ga='git add .'
-abbr gm='git commit'
-abbr gd='git branch | grep -v "main\|develop\|release-candidate" | xargs git branch -D'
-abbr grs='git reset --soft'
-abbr grh='git reset --hard'
-abbr gc='git commit'
-abbr gc='git commit --fixup'
-abbr gia='git rebase -i --autosquash'
+# git command alias
+alias gb='git branch'
+alias gl='git log'
+alias glo='git log --oneline'
+alias gf='git fetch'
+alias gph='git push origin'
+alias gpfh='git push -f origin'
+alias gpl='git pull origin'
+alias gcb='git checkout -b'
+alias gs='git switch'
+alias gst='git stash'
+alias gsta='git stash apply'
+alias ga='git add .'
+alias gm='git commit'
+alias gd='git branch | grep -v "main\|develop\|release-candidate" | xargs git branch -D'
+alias grs='git reset --soft'
+alias grh='git reset --hard'
+alias gc='git commit'
+alias gc='git commit --fixup'
+alias gia='git rebase -i --autosquash'
 
-# GitHub cli abbr
-abbr ghbb='gh pr view --web'
-abbr ghb='gh browse'
-abbr ghp='gh pr create --web'
-abbr ghpl='gh pr list'
-abbr ghprs='gh requested-prs'
+# GitHub cli alias
+alias ghbb='gh pr view --web'
+alias ghb='gh browse'
+alias ghp='gh pr create --web'
+alias ghpl='gh pr list'
+alias ghprs='gh requested-prs'
 
-# others abbr
-abbr ghqlist='cd $(ghq list -p | peco)'
-abbr t='tig'
-abbr c='code .'
-abbr tree="pwd;find . | sort | sed '1d;s/^\.//;s/\/\([^/]*\)$/|--\1/;s/\/[^/|]*/| /g'"
-abbr n="nvim"
-abbr e="exit"
-abbr l='lazydocker'
-abbr db='gobang'
+# others alias
+alias ghqlist='cd $(ghq list -p | peco)'
+alias t='tig'
+alias c='code .'
+alias tree="pwd;find . | sort | sed '1d;s/^\.//;s/\/\([^/]*\)$/|--\1/;s/\/[^/|]*/| /g'"
+alias n="nvim"
+alias e="exit"
+alias l='lazydocker'
+alias db='gobang'
 
 #node
 export PATH=$HOME/.nodebrew/current/bin:$PATH

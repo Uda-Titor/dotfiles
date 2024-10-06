@@ -1,6 +1,6 @@
 [user]
     name = 'Ryohei Udagawa'
-    email = 'hogehoge'
+    email = 'r.udagawa1995@gmail.com'
 [core]
         editor = vim -c \"set fenc=utf-8\"
 [commit]

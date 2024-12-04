@@ -13,6 +13,8 @@ zstyle :prompt:pure:path color '#ffff00'
 
 bindkey '^r' anyframe-widget-execute-history
 bindkey '^b' anyframe-widget-checkout-git-branch
+bindkey "[D" backward-word
+bindkey "[C" forward-word
 
 # git command alias
 alias gb='git branch'
@@ -63,6 +65,7 @@ export PKG_CONFIG_PATH=$PKG_CONFIG_PATH:"/opt/homebrew/opt/openssl@1.1/lib/pkgco
 
 #go
 export GOPATH=$HOME/go
+export PATH=$PATH:/opt/homebrew/opt/go
 
 # その他
 export PATH="/usr/local/opt/openjdk@11/bin:$PATH"
@@ -74,3 +77,4 @@ export PATH="/opt/homebrew/opt/libpq/bin:$PATH"
 export LDFLAGS="-L/opt/homebrew/opt/libpq/lib"
 export CPPFLAGS="-I/opt/homebrew/opt/libpq/include"
 export PKG_CONFIG_PATH="/opt/homebrew/opt/libpq/lib/pkgconfig"
+

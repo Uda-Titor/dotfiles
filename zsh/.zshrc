@@ -13,8 +13,8 @@ zstyle :prompt:pure:path color '#ffff00'
 
 bindkey '^r' anyframe-widget-execute-history
 bindkey '^b' anyframe-widget-checkout-git-branch
-bindkey "[D" backward-word
-bindkey "[C" forward-word
+bindkey ";3C" forward-word
+bindkey ";3D" backward-word
 
 # git command alias
 alias gb='git branch'

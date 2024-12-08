@@ -18,6 +18,7 @@ zinit light zsh-users/zsh-autosuggestions
 zinit light zsh-users/zsh-completions
 zinit light sindresorhus/pure
 zstyle :prompt:pure:path color '#ffff00'
+zstyle :prompt:pure:git:branch color '#00aaff'
 
 bindkey ";3C" forward-word
 bindkey ";3D" backward-word

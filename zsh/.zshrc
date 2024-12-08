@@ -1,4 +1,3 @@
-eval "$(rbenv init -)"
 eval "$(direnv hook zsh)"
 eval "$(zoxide init zsh)"
 source $HOMEBREW_PREFIX/opt/zinit/zinit.zsh
@@ -59,7 +58,6 @@ alias tree="pwd;find . | sort | sed '1d;s/^\.//;s/\/\([^/]*\)$/|--\1/;s/\/[^/|]*
 alias n="nvim"
 alias e="exit"
 alias l='lazydocker'
-unalias zi
 
 #node
 export PATH=$HOME/.nodebrew/current/bin:$PATH

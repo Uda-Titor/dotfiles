@@ -41,7 +41,7 @@ alias gd='git branch | grep -v "main\|develop\|release-candidate" | xargs git br
 alias grs='git reset --soft'
 alias grh='git reset --hard'
 alias gc='git commit'
-alias gc='git commit --fixup'
+alias gcf='git commit --fixup'
 alias gia='git rebase -i --autosquash'
 
 # GitHub cli alias

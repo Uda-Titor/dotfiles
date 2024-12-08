@@ -1,6 +1,4 @@
-tap "adoptopenjdk/openjdk"
 tap "daipeihust/tap"
-tap "homebrew/bundle"
 tap "robotsandpencils/made"
 brew "act"
 brew "alp"

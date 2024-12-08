@@ -1,7 +1,5 @@
-eval "$(direnv hook zsh)"
 eval "$(zoxide init zsh)"
 eval "$(/opt/homebrew/bin/mise activate zsh)"
-eval "$(rbenv init - zsh)"
 source $HOMEBREW_PREFIX/opt/zinit/zinit.zsh
 
 # fzf history

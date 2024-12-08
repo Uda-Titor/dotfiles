@@ -59,6 +59,7 @@ alias tree="pwd;find . | sort | sed '1d;s/^\.//;s/\/\([^/]*\)$/|--\1/;s/\/[^/|]*
 alias n="nvim"
 alias e="exit"
 alias l='lazydocker'
+unalias zi
 
 #node
 export PATH=$HOME/.nodebrew/current/bin:$PATH
@@ -83,4 +84,3 @@ export PATH="/opt/homebrew/opt/libpq/bin:$PATH"
 export LDFLAGS="-L/opt/homebrew/opt/libpq/lib"
 export CPPFLAGS="-I/opt/homebrew/opt/libpq/include"
 export PKG_CONFIG_PATH="/opt/homebrew/opt/libpq/lib/pkgconfig"
-

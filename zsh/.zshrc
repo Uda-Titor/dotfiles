@@ -1,5 +1,7 @@
 eval "$(direnv hook zsh)"
 eval "$(zoxide init zsh)"
+eval "$(/opt/homebrew/bin/mise activate zsh)"
+eval "$(rbenv init - zsh)"
 source $HOMEBREW_PREFIX/opt/zinit/zinit.zsh
 
 # fzf history
@@ -58,19 +60,6 @@ alias tree="pwd;find . | sort | sed '1d;s/^\.//;s/\/\([^/]*\)$/|--\1/;s/\/[^/|]*
 alias n="nvim"
 alias e="exit"
 alias l='lazydocker'
-
-#node
-export PATH=$HOME/.nodebrew/current/bin:$PATH
-
-# openssl
-export PATH="/opt/homebrew/opt/openssl@1.1/bin:$PATH"
-export LIBRARY_PATH="$LIBRARY_PATH:/opt/homebrew/opt/openssl@1.1/lib/"
-export RUBY_CONFIGURE_OPTS="--with-openssl-dir=/opt/homebrew/opt/openssl@1.1"
-export PKG_CONFIG_PATH=$PKG_CONFIG_PATH:"/opt/homebrew/opt/openssl@1.1/lib/pkgconfig"
-
-#go
-export GOPATH=$HOME/go
-export PATH=$PATH:/opt/homebrew/opt/go
 
 # その他
 export PATH="/usr/local/opt/openjdk@11/bin:$PATH"

@@ -3,16 +3,22 @@ eval "$(direnv hook zsh)"
 eval "$(zoxide init zsh)"
 source $HOMEBREW_PREFIX/opt/zinit/zinit.zsh
 
+# fzf history
+function fzf-select-history() {
+    BUFFER=$(history -n -r 1 | fzf --query "$LBUFFER" --reverse)
+    CURSOR=$#BUFFER
+    zle reset-prompt
+}
+zle -N fzf-select-history
+bindkey '^r' fzf-select-history
+
 # zinit plugins
 zinit light zsh-users/zsh-syntax-highlighting
 zinit light zsh-users/zsh-autosuggestions
 zinit light zsh-users/zsh-completions
-zinit light mollifier/anyframe
 zinit light sindresorhus/pure
 zstyle :prompt:pure:path color '#ffff00'
 
-bindkey '^r' anyframe-widget-execute-history
-bindkey '^b' anyframe-widget-checkout-git-branch
 bindkey ";3C" forward-word
 bindkey ";3D" backward-word
 
@@ -25,7 +31,7 @@ alias gph='git push origin'
 alias gpfh='git push -f origin'
 alias gpl='git pull origin'
 alias gcb='git checkout -b'
-alias gs='git switch'
+alias gs="git branch --list | cut -c 3- | fzf --preview \"git log --pretty=format:'%h %cd %s' --date=format:'%Y-%m-%d %H:%M' {}\" | xargs git switch"
 alias gst='git stash'
 alias gsta='git stash apply'
 alias ga='git add .'
@@ -45,14 +51,13 @@ alias ghpl='gh pr list'
 alias ghprs='gh requested-prs'
 
 # others alias
-alias ghqlist='cd $(ghq list -p | peco)'
+alias ghqlist='cd $(ghq list -p | fzf)'
 alias t='tig'
 alias c='code .'
 alias tree="pwd;find . | sort | sed '1d;s/^\.//;s/\/\([^/]*\)$/|--\1/;s/\/[^/|]*/| /g'"
 alias n="nvim"
 alias e="exit"
 alias l='lazydocker'
-alias db='gobang'
 
 #node
 export PATH=$HOME/.nodebrew/current/bin:$PATH

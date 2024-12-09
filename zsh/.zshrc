@@ -69,3 +69,11 @@ export PATH="/opt/homebrew/opt/libpq/bin:$PATH"
 export LDFLAGS="-L/opt/homebrew/opt/libpq/lib"
 export CPPFLAGS="-I/opt/homebrew/opt/libpq/include"
 export PKG_CONFIG_PATH="/opt/homebrew/opt/libpq/lib/pkgconfig"
+
+# ShellScript
+function sea() {
+    local search_query="$@"
+    local encoded_query=$(echo "$search_query" | sed 's/ /+/g')
+    open "https://www.google.com/search?q=$encoded_query"
+}
+

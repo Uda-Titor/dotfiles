@@ -1,4 +1,4 @@
-eval "$(zoxide init zsh)"
+eval "$(zoxide init zsh --cmd j)"
 eval "$(/opt/homebrew/bin/mise activate zsh)"
 source $HOMEBREW_PREFIX/opt/zinit/zinit.zsh
 

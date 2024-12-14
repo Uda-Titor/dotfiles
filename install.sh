@@ -1,1 +1,1 @@
-brew bundle cleanup --force
+brew bundle

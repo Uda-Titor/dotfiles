@@ -9,8 +9,25 @@ function fzf-select-history() {
     CURSOR=$#BUFFER
     zle reset-prompt
 }
+
+# fzf git switch
+function fzf-git-switch() {
+  target_br=$(
+    git branch -a |
+      fzf --exit-0 --layout=reverse --info=hidden --no-multi --preview-window="right,65%" --prompt="CHECKOUT BRANCH > " --preview="echo {} | tr -d ' *' | xargs git lgn --color=always" |
+      head -n 1 |
+      perl -pe "s/\s//g; s/\*//g; s/remotes\/origin\///g"
+  )
+  if [ -n "$target_br" ]; then
+    BUFFER="git switch $target_br"
+    zle accept-line
+  fi
+}
+
 zle -N fzf-select-history
+zle -N fzf-git-switch
 bindkey '^r' fzf-select-history
+bindkey '^b' fzf-git-switch
 
 # zinit plugins
 zinit light zsh-users/zsh-syntax-highlighting
@@ -32,7 +49,7 @@ alias gph='git push origin'
 alias gpfh='git push -f origin'
 alias gpl='git pull origin'
 alias gcb='git checkout -b'
-alias gs="git branch --list | cut -c 3- | fzf --preview \"git log --pretty=format:'%h %cd %s' --date=format:'%Y-%m-%d %H:%M' {}\" | xargs git switch"
+alias gs="git switch"
 alias gst='git stash'
 alias gsta='git stash apply'
 alias ga='git add .'

@@ -20,3 +20,9 @@ zsh install.sh
 ```zsh
 stow -v config git zsh
 ```
+
+### 5. macの設定を変更する
+
+```zsh
+zsh set-up-mac.sh
+```

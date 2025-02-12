@@ -18,3 +18,12 @@
 	diff = true
 	interactive = true
 	status = true
+[diff]
+  tool = difftastic
+  external = difft
+[difftool]
+  prompt = false
+[difftool "difftastic"]
+  cmd = difft "$LOCAL" "$REMOTE"
+[pager]
+  difftool = true

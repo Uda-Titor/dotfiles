@@ -15,7 +15,7 @@ function fzf-select-history() {
 function fzf-git-switch() {
   target_br=$(
     git branch -a |
-      fzf --exit-0 --layout=reverse --info=hidden --no-multi --preview-window="right,65%" --prompt="CHECKOUT BRANCH > " --preview="echo {} | tr -d ' *' | xargs git lgn --color=always" |
+      fzf --exit-0 --layout=reverse --info=hidden --no-multi --preview-window="right,65%" --prompt="CHECKOUT BRANCH > " --preview="echo {} | tr -d ' *' | xargs git log --color=always" |
       head -n 1 |
       perl -pe "s/\s//g; s/\*//g; s/remotes\/origin\///g"
   )

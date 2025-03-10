@@ -26,3 +26,9 @@ stow -v config git zsh
 ```zsh
 zsh set-up-mac.sh
 ```
+
+### 6. ghコマンドの拡張機能を入れる
+
+```zsh
+gh extension install dlvhdr/gh-dash
+```

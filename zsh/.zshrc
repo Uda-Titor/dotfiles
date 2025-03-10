@@ -68,6 +68,7 @@ alias ghb='gh browse'
 alias ghp='gh pr create --web'
 alias ghpl='gh pr list'
 alias ghprs='gh requested-prs'
+alias ghd='gh dash'
 
 # others alias
 alias ghqlist='cd $(ghq list -p | fzf)'

@@ -3,6 +3,7 @@ eval "$(/opt/homebrew/bin/mise activate zsh)"
 source $HOMEBREW_PREFIX/opt/zinit/zinit.zsh
 eval "$(rbenv init - zsh)"
 eval "$(mise activate zsh)"
+eval "$(direnv hook zsh)"
 
 # fzf history
 function fzf-select-history() {

@@ -1,10 +1,10 @@
 [user]
-    name = 'Ryohei Udagawa'
-    email = 'r.udagawa1995@gmail.com'
+  name = 'Ryohei Udagawa'
+  email = 'r.udagawa1995@gmail.com'
 [core]
-        editor = vim -c \"set fenc=utf-8\"
+  editor = vim -c \"set fenc=utf-8\"
 [commit]
-        template = ~/.commit_template
+  template = ~/.commit_template
 [ghq]
         root = ~/workspace/ghq
 [push]
@@ -27,3 +27,8 @@
   cmd = difft "$LOCAL" "$REMOTE"
 [pager]
   difftool = true
+[credential]
+	helper =
+	helper = /usr/local/share/gcm-core/git-credential-manager
+[credential "https://dev.azure.com"]
+	useHttpPath = true
